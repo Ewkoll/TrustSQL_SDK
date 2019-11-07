@@ -1,0 +1,130 @@
+﻿{
+  "configurations": [
+    {
+      "name": "Linux-Debug",
+      "generator": "Unix Makefiles",
+      "remoteMachineName": "192.168.7.251",
+      "configurationType": "Debug",
+      "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
+      "cmakeExecutable": "/home/cmake/cmake-3.14.2542820-MSVC_2-Linux-x64/bin/cmake",
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
+      "remoteCopySources": true,
+      "remoteCopySourcesOutputVerbosity": "Normal",
+      "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [
+        ".vs",
+        ".git"
+      ],
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "cmakeCommandArgs": "-DOPENSSL_ROOT_DIR=\"/home/openssl\"",
+      "buildCommandArgs": "-j16",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [
+        "linux_x64"
+      ]
+    },
+    {
+      "name": "Linux-Release",
+      "generator": "Unix Makefiles",
+      "remoteMachineName": "192.168.7.251",
+      "configurationType": "RelWithDebInfo",
+      "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
+      "cmakeExecutable": "/home/cmake/cmake-3.14.2542820-MSVC_2-Linux-x64/bin/cmake",
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
+      "remoteCopySources": true,
+      "remoteCopySourcesOutputVerbosity": "Normal",
+      "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [
+        ".vs",
+        ".git"
+      ],
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "cmakeCommandArgs": "-DOPENSSL_ROOT_DIR=/home/openssl",
+      "buildCommandArgs": "-j16",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [
+        "linux_x64"
+      ]
+    },
+    {
+      "environments": [
+        {
+          "MINGW64_ROOT": "D:\\MinGW64\\x86_64-8.1.0-win32-seh-rt_v6-rev0\\mingw64",
+          "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
+          "FLAVOR": "x86_64-w64-mingw32",
+          "TOOLSET_VERSION": "8.1.0",
+          "PATH": "${env.MINGW64_ROOT}\\bin;${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
+          "INCLUDE": "${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\tr1;${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\${env.FLAVOR}",
+          "environment": "mingw_64"
+        }
+      ],
+      "name": "Mingw64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [
+        "mingw_64"
+      ],
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "intelliSenseMode": "linux-gcc-x64",
+      "variables": [
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "${env.BIN_ROOT}\\gcc.exe"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "${env.BIN_ROOT}\\g++.exe"
+        }
+      ]
+    },
+    {
+      "environments": [
+        {
+          "MINGW64_ROOT": "D:\\MinGW64\\x86_64-8.1.0-win32-seh-rt_v6-rev0\\mingw64",
+          "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
+          "FLAVOR": "x86_64-w64-mingw32",
+          "TOOLSET_VERSION": "7.3.0",
+          "PATH": "${env.MINGW64_ROOT}\\bin;${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
+          "INCLUDE": "${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\tr1;${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\${env.FLAVOR}",
+          "environment": "mingw_64"
+        }
+      ],
+      "name": "Mingw64-Release",
+      "generator": "Ninja",
+      "configurationType": "RelWithDebInfo",
+      "inheritEnvironments": [
+        "mingw_64"
+      ],
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "intelliSenseMode": "linux-gcc-x64",
+      "variables": [
+        {
+          "name": "CMAKE_C_COMPILER",
+          "value": "${env.BIN_ROOT}\\gcc.exe"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "${env.BIN_ROOT}\\g++.exe"
+        }
+      ]
+    }
+  ]
+}
